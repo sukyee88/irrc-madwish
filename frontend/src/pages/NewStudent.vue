@@ -90,10 +90,8 @@
 
 
 <script>
-
 export default {
   name: 'NewStudent',
-
   data() {
       return {
           languageData: [
@@ -117,13 +115,11 @@ export default {
           file: null,
       }
   },
-
   watch: {
     file: function(val){
       this.uploadFile();
     }
   },
-
   computed: {
     filteredLanguageDataArray() {
         return this.languageData.filter((option) => {
@@ -142,8 +138,6 @@ export default {
             })
     }  
   },
-
-
   methods: {
     createStudent(){
       this.$buefy.notification.open({
@@ -154,7 +148,6 @@ export default {
         // color: '#57A773',
       })
     },
-
     uploadFile(){
       this.$buefy.notification.open({
         message: 'The file was uploaded successfully!',
@@ -164,8 +157,6 @@ export default {
         // color: '#57A773',
       })
     },
-
-
     errorUpload(){
       this.$buefy.notification.open({
         message: '<b>There was an error in uploading.</b> <br> Please check formatting of the file and try again.',
@@ -175,9 +166,6 @@ export default {
         // color: '#57A773',
       })
     },
-
-
-
     showAddLanguage() {
         this.$buefy.dialog.prompt({
           message: `Add new language`,
@@ -211,7 +199,6 @@ export default {
 </script>
 
 <style>
-
 button.button.dark-blue{
   background-color: #3C4F76;
   color: white; 
@@ -219,67 +206,49 @@ button.button.dark-blue{
   box-sizing: border-box;
   border-radius: 4px;
 }
-
-
 .label {
   color: #59666E !important;
 }
-
 b.newstudent {
   font-size: 30px;
   padding-left: 20px;
 }
-
 body {
   background-color: #F3F7FA !important;
 }
-
 .container {
   padding: 20px;
   background-color: transparent;
 }
-
-
 .columns{
   background-color:white;
   margin-top: 100px;
 }
-
 .Title{
   padding-bottom:20px;
   vertical-align: bottom !important;
 }
-
-
 .columns.is-multiline.is-mobile{
   padding:20px 0px 20px 0px;
   margin: auto;
   margin-left:20px;
   margin-right:20px;
 }
-
-
 .file.is-primary.is-right{
   float:right;
 }
-
 .file.is-primary .file-cta {
   background-color: transparent !important;
   float: right;
   color: #3C4F76 !important;
   padding-left:10px;
 }
-
 .half-width{
   width:50%;
 }
-
-
 html {
     background-color: #F3F7FA;
 }
-
-
 .notification.is-success {
   background-color: #57A773 !important;
   font: #fff;
@@ -288,9 +257,6 @@ html {
   border-radius: 32px;
   text-align: center;
 }
-
-
-
 .notification.is-danger {
   background-color: #C33715 !important;
   font: #fff;
@@ -299,7 +265,4 @@ html {
   border-radius: 32px;
   text-align: center;
 }
-
-
-
 </style>
